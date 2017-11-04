@@ -15,12 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('view/{id}',[
-    'uses' =>'RestController@restar',
+Route::get('terror',[
+    'uses' =>'RestController@terror',
     'as' => 'restView'
 ]);
 Route::get('prueba', function (){
    return view('video');
 });
 
-
+Route::get('ciencia', [
+    'uses'=> 'RestController@ciencia'
+]);
+Route::get('programacion', [
+    'uses'=> 'RestController@programacion'
+]);
+Route::get('base', [
+    'uses'=> 'RestController@base'
+]);
+Route::get('historia', [
+    'uses'=> 'RestController@historia'
+]);
